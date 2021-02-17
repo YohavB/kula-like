@@ -2,37 +2,168 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title {
+  background-color: aliceblue;
+  font-size: 120px;
+  color: var(--blue);
+  font-weight: 450;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding-bottom: 15px;
+}
+.subtitle {
+  width: 80%;
+  margin: auto;
+  display: block;
+  font-size: 30px;
+}
+
+.icon-title {
+  height: 90px;
+}
+
+.kulatext {
+  font-size: 30px;
+  color: var(--blue);
+  font-weight: 450;
+}
+
+.icon-text {
+  height: 20px;
+}
+
+.curveArea {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  bottom: 0;
+}
+
+.mainBox {
+  height: 100%;
+  overflow: hidden;
+}
+
+.curveSection {
+  width: 200%;
+  height: 100%;
+  border-radius: 50%;
+  background: aliceblue;
+  top: 25%;
+  left: -50%;
+  right: 0;
+  position: relative;
+  border-top: 10px solid var(--blue);
+  display: flex;
+  justify-content: center;
+}
+
+.sectionchoice {
+  position: relative;
+  top: 100px;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.homebtn.left {
+  background-image: linear-gradient(
+    to right,
+    #1a2980 0%,
+    #26d0ce 51%,
+    #1a2980 100%
+  );
+}
+.homebtn.right {
+  background-image: linear-gradient(
+    to left,
+    #26d0ce 0%,
+    #1a2980 49%,
+    #26d0ce 100%
+  );
+}
+
+.homebtn {
+  height: 150px;
+  width: 250px;
+  border-width: 5px;
+  border-color: var(--blue);
+  cursor: pointer;
+  background-color: aliceblue;
+  text-align: center;
+  font-size: 28px;
+  transition: 0.5s;
+  background-size: 200% auto;
   color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
 }
 
-.App-link {
-  color: #61dafb;
+.homebtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.homebtn.left span:before {
+  content: "\00ab";
+  opacity: 0;
+  top: 50%;
+  left: -20px;
+  transition: 0.5s;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.homebtn.right span:after {
+  content: "\00bb";
+  opacity: 0;
+  right: -20px;
+  transition: 0.5s;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.homebtn.left:hover {
+  background-position: right; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.homebtn.right:hover {
+  background-position: right; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.homebtn.left:hover span {
+  padding-left: 25px;
+}
+
+.homebtn.right:hover span {
+  padding-right: 25px;
+}
+
+.homebtn.right:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.homebtn.left:hover span::before {
+  opacity: 1;
+  left: 0;
+}
+
+.homebtn:focus {
+  outline: 0;
 }
