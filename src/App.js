@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import MainHR from "./HR-side/MainHR";
 import MainJunior from "./Junior-side/MainJunior";
+import Card from "./mock/Card";
 
 function App() {
   return (

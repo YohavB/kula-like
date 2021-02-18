@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import KulaLike from "./KulaLike";
 import KulaText from "./KulaText";
 
@@ -16,12 +17,16 @@ export default function Home() {
         <div className="mainBox">
           <div className="curveSection">
             <div className="sectionchoice">
-              <button className="homebtn left">
-                <span>HR, HH ? Clique ici !</span>
-              </button>
-              <button className="homebtn right">
-                <span>Junior? Fais toi connaitre par ici !</span>
-              </button>
+              <Link to="/hr-side">
+                <button className="homebtn left">
+                  <span>HR, HH ? Clique ici !</span>
+                </button>
+              </Link>
+              <Link to="/junior-side">
+                <button className="homebtn right">
+                  <span>Junior? Fais toi connaitre par ici !</span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

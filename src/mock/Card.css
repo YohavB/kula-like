@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  margin: 10px;
+}
+
+.card {
+  border: solid 2px black;
+  width: 600px;
+}
+
+.userinfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: solid 2px black;
+}
+
+.userdetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+
+.userpic {
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 5px;
+}
+
+.userpic > * {
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.username {
+  font-size: 2rem;
+}
+.userheadline {
+  font-size: 1.5rem;
+
+}
+.userstack {
+}
+
+.usercontact {
+  display: flex;
+  height: 100px;
+  flex-wrap: wrap;
+}
+.usercontact a img{
+  cursor: pointer;
+  flex: 1 1 50px;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.aboutuser {
+  margin-top: 10px;
+  max-height: 50px;
+  overflow: hidden;
+  transition: all 0.8s ease-in-out;
+}
+
+.aboutuser.open {
+  height: auto;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.extendscard {
+  cursor: pointer;
+  border: solid 2px black;
+  background-color: violet;
+}
+
+.extendscard img{
+  height: 20px;
+  width: 20px;
+}
